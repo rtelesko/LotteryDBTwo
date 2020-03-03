@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void SQLiteDataBaseBuild() {
+        // See: https://developer.android.com/reference/android/database/sqlite/SQLiteDatabase
         sqLiteDatabaseObj = openOrCreateDatabase(SQLiteHelper.DATABASE_NAME, Context.MODE_PRIVATE, null);
     }
 
@@ -77,7 +78,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void insertDataIntoSQLiteDatabase() {
-
         if (etEmptyHold == true) {
             SQLiteDataBaseQueryHolder = "INSERT INTO " + SQLiteHelper.TABLE_NAME + " (" + SQLiteHelper.Table_Column_1_Name + ", " +
                     SQLiteHelper.Table_Column_2_Location + ") VALUES('" + nameHolder + "', '" + locationHolder + "');";

@@ -18,7 +18,6 @@ public class DisplaySQLiteDataActivity extends AppCompatActivity {
     Cursor cursor;
     ListAdapter listAdapter;
     ListView listView;
-
     ArrayList<String> idArray;
     ArrayList<String> nameArray;
     ArrayList<String> locationArray;
@@ -30,16 +29,16 @@ public class DisplaySQLiteDataActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_sqlite_data);
         listView = findViewById(R.id.lvRecords);
-        idArray = new ArrayList<String>();
-        nameArray = new ArrayList<String>();
-        locationArray = new ArrayList<String>();
+        idArray = new ArrayList<>();
+        nameArray = new ArrayList<>();
+        locationArray = new ArrayList<>();
         sqLiteHelper = new SQLiteHelper(this);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // TODO Auto-generated method stub
                 Intent intent = new Intent(getApplicationContext(), ShowSingleRecordActivity.class);
-                intent.putExtra("ListViewClickedItemValue", listViewClickItemArray.get(position).toString());
+                intent.putExtra("ListViewClickedItemValue", listViewClickItemArray.get(position));
                 startActivity(intent);
             }
         });
