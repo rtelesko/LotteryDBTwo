@@ -57,8 +57,8 @@ public class ShowSingleRecordActivity extends AppCompatActivity {
 
     @Override
     protected void onResume() {
-        showSingleRecordInTextView();
         super.onResume();
+        showSingleRecordInTextView();
     }
 
     public void showSingleRecordInTextView() {

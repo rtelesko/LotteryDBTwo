@@ -46,8 +46,8 @@ public class DisplaySQLiteDataActivity extends AppCompatActivity {
 
     @Override
     protected void onResume() {
-        showSQLiteDBData();
         super.onResume();
+        showSQLiteDBData();
     }
 
     private void showSQLiteDBData() {

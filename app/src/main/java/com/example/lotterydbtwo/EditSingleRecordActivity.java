@@ -64,8 +64,8 @@ public class EditSingleRecordActivity extends AppCompatActivity {
 
     @Override
     protected void onResume() {
-        showRecordInEditText();
         super.onResume();
+        showRecordInEditText();
     }
 
     public void showRecordInEditText() {
